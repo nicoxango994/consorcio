@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fbfd;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #e6f2f8;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: #0077b6;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #005f86;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0077b6;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0, 119, 182, 0.5), rgba(0, 119, 182, 0.5)), 
+                url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.btn {
+    display: inline-block;
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #005f86;
+}
+
+/* SECCIONES */
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #0077b6;
+}
+
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicio {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* FORMULARIO */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.whatsapp img {
+    width: 40px;
+}
+
+/* REDES SOCIALES */
+.social-icons {
+    position: fixed;
+    top: 40%;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px 0;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #e6f2f8;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 15px;
+        width: 200px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio {
+        width: 90%;
+    }
+}
